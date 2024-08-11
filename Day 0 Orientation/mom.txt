@@ -1,0 +1,38 @@
+
+
+Date 11th aug, 2024
+
+-Setup
+-INTRODUCTION
+
+
+
+JAVASCRIPT ??
+
+var age=27;
+age=28;
+
+
+
+output
+input-variable
+conditionals
+repeat -loops
+function
+
+
+level 1 - code 
+
+- problem solving 
+- questions - code 
+
+
+1- output
+
+
+
+
+
+
+
+

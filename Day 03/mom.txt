@@ -1,0 +1,10 @@
+
+Date 24th Aug 2024
+
+Last Class - loops patterns
+
+loops - Number Traversal 
+
+
+operator / %
+

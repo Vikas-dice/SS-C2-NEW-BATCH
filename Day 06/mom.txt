@@ -1,0 +1,30 @@
+
+
+Prime Number ??
+
+console.log();
+
+
+es6 - fat arrow function -- 
+
+syntax
+
+- DRY 
+-MODULAR CODE 
+
+Syntax- fat arrow 
+
+es5 function fname(){
+
+}
+
+
+
+
+
+
+
+
+
+
+

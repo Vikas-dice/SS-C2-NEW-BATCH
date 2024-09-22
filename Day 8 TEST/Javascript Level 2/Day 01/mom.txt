@@ -1,0 +1,9 @@
+Date 21st sept , 2024
+Last Class - Level 1 recap 
+
+
+// variable,if-else/switch,loops/function/array/[DOM]
+// why there is a need of an array
+//array
+
+const arr = [1,2,4]

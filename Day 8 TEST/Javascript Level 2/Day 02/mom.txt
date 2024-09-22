@@ -1,0 +1,42 @@
+
+Date 22nd sept , 2024
+
+Last Class - Array Intro 
+
+Array - Linear DS
+
+
+DS - Container - bucket - data
+
+let age =10;
+let name="vikas;
+let marks =55.55;
+
+//condition - 50 students age 
+
+let student1age=10;
+let student2age=20;
+let student3age=30;
+
+
+....50 
+
+
+RAM - 
+
+jUGAAD -Array 
+
+syntax - [10.20,30,40,50.....]
+
+java , c++ ,c == array - homogenous data type - 
+
+[20,30,40]
+["vikas","rohan","fjfj"]
+[true, false, true]
+
+
+
+js - hetrogenous - mix data 
+
+["vikas",20,10000,55.55,[],function]
+

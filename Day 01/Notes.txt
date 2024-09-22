@@ -1,0 +1,4 @@
+day 1 js level 2
+
+hello world 
+hello dunia 

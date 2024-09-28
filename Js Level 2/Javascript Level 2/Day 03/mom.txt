@@ -1,0 +1,17 @@
+
+
+Date 28th sept , 2024
+
+Last Class - Array methods 
+
+slice 
+splice 
+
+String Intro
+
+
+Slice (start,end)
+start=inclusive 
+end - exclusive (-1)
+
+

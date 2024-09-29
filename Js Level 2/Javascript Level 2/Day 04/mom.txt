@@ -1,0 +1,20 @@
+
+
+Date 29th sept , 2024
+
+Last Class - string intro , questions
+
+Check string -palindrome 
+
+nitin
+malayalam 
+
+func (){
+    return true ,false;
+
+}
+
+
+keyword - this 
+
+this - binding 

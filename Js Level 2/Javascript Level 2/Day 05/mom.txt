@@ -1,0 +1,21 @@
+
+
+Date 5th oct , 2024
+
+Last Class - this keyword - bind krne k kaam aata h
+
+
+objects - containers - 
+
+let name;
+let age;
+let salary;
+let ismarried ;
+
+
+solution - array , object 
+
+array - 50 logo ki age store - array
+object - 1 insaan --multiple details -0 object 
+
+

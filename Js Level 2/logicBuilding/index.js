@@ -54,11 +54,54 @@ function firstOccurence(arr, target) {
     }
     return low;
 }
-console.log(firstOccurence([1, 2, 3, 4, 4, 4, 6, 7, 33, 55, 98], 4))
-firstOccurence // 3
-lastOccurence // 5
-TotalOcc // last-first+1
+// console.log(firstOccurence([1, 2, 3, 4, 4, 4, 6, 7, 33, 55, 98], 4))
+// firstOccurence // 3
+// lastOccurence // 5
+// TotalOcc // last-first+1
 // 5-3+1
+function lastOccurence(arr, target) {
+    let low = 0;
+    let high = arr.length - 1
+    console.log(low, high)
+    while (low <= high) {
+        let mid = Math.floor((low + high) / 2)
+        if (arr[mid] <= target) {
+            low = mid + 1
+        } else {
+            high = mid - 1
+        }
+        console.log(low, high)
+    }
+
+}
 
 
 
+
+// console.log(lastOccurence([1, 2, 3, 4, 4, 4, 6, 7, 33, 55, 98], 4))
+
+function searchInSortedRotated(arr, n) {
+    let low = 0
+    let high = arr.length - 1;
+    while (low <= high) {
+        let mid = Math.floor((low + high) / 2)
+        if (arr[mid] === n) {
+            return mid
+        }
+        else if (arr[low] <= arr[mid]) { // left sorted
+            if (arr[low] <= n && n <= arr[mid]) {
+                high = mid - 1
+            } else {
+                low = mid + 1
+            }
+        } else { // right sorted
+            if (arr[mid] >= n && n <= arr[high]) {
+                low = mid + 1
+            } else {
+                high = mid - 1
+            }
+        }
+    }
+}
+
+console.log(searchInSortedRotated([4, 5, 6, 7, 0, 1, 2], 5))

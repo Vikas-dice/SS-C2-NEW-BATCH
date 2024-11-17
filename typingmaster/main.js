@@ -41,7 +41,9 @@ let wordInput = document.getElementById("word-input")
 let scoreDisplay = document.getElementById("score")
 let timeDisplay = document.getElementById("time")
 let message = document.getElementById("message")
-
+let audioPlayer = document.getElementById('audioPlayer');
+let isGameOver = false;
+let userInteracted = false; //
 
 function init() {
     //Load words from array
@@ -64,9 +66,12 @@ function showWords(words) {
 }
 
 function startMatch(e) {
+    console.log(e.target.value)
+    userInteracted = true
     // console.log(e.target.value, currentWord.textContent)
     if (e.target.value === currentWord.textContent) {
-        currentWord.textContent = words[Math.floor(Math.random() * words.length)]
+        showWords(words)
+
         wordInput.value = ""
         score++;
         console.log(score)
@@ -79,7 +84,15 @@ function startMatch(e) {
 function checkStatus() {
     if (time === 0) {
         message.textContent = "Game Over"
+
+        if (!isGameOver && userInteracted) {
+            audioPlayer.play().catch(error => {
+                console.error("Audio playback failed:", error);
+            });
+            isGameOver = true
+        }
     }
+
 }
 
 

@@ -1,48 +1,48 @@
-const p1 = new Promise((resolve, reject) => {
-    setTimeout(() => {
-        reject("hello")
-    }, 1000)
-    // resolve("hello")
-})
-console.log("p1", p1)
-p1.then(data => console.log("===>", data))
-    .catch(err => console.log("error", err))
+// const p1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         reject("hello")
+//     }, 1000)
+//     // resolve("hello")
+// })
+// console.log("p1", p1)
+// p1.then(data => console.log("===>", data))
+//     .catch(err => console.log("error", err))
 
 
-    //Example of Chatgpt
-    // function fetchUser(callback) {
-    //     setTimeout(() => {
-    //         console.log("User fetched");
-    //         callback({ userId: 1 });
-    //     }, 1000);
-    // }
-    
-    // function fetchOrders(userId, callback) {
-    //     setTimeout(() => {
-    //         console.log("Orders fetched for user:", userId);
-    //         callback([{ orderId: 101 }, { orderId: 102 }]);
-    //     }, 1000);
-    // }
-    
-    // function fetchPaymentStatus(orderId, callback) {
-    //     setTimeout(() => {
-    //         console.log("Payment status fetched for order:", orderId);
-    //         callback("Paid");
-    //     }, 1000);
-    // }
-    
-    // // Callback Hell
-    // fetchUser((user) => {
-    //     fetchOrders(user.userId, (orders) => {
-    //         fetchPaymentStatus(orders[0].orderId, (status) => {
-    //             console.log("Payment Status:", status);
-    //         });
-    //     });
-    // });
-    
+//Example of Chatgpt
+// function fetchUser(callback) {
+//     setTimeout(() => {
+//         console.log("User fetched");
+//         callback({ userId: 1 });
+//     }, 1000);
+// }
 
-    //Promise Code
-    //function fetchUser() {
+// function fetchOrders(userId, callback) {
+//     setTimeout(() => {
+//         console.log("Orders fetched for user:", userId);
+//         callback([{ orderId: 101 }, { orderId: 102 }]);
+//     }, 1000);
+// }
+
+// function fetchPaymentStatus(orderId, callback) {
+//     setTimeout(() => {
+//         console.log("Payment status fetched for order:", orderId);
+//         callback("Paid");
+//     }, 1000);
+// }
+
+// // Callback Hell
+// fetchUser((user) => {
+//     fetchOrders(user.userId, (orders) => {
+//         fetchPaymentStatus(orders[0].orderId, (status) => {
+//             console.log("Payment Status:", status);
+//         });
+//     });
+// });
+
+
+//Promise Code
+//function fetchUser() {
 //     return new Promise((resolve) => {
 //         setTimeout(() => {
 //             console.log("User fetched");
@@ -118,3 +118,27 @@ p1.then(data => console.log("===>", data))
 // }
 
 // processPayment();
+
+let btn = document.getElementById("btn")
+
+btn.addEventListener("click", async function () {
+
+    fetch('https://jsonplaceholder.typicode.com/todos')
+        .then(uday => uday.json())
+        .then(data => {
+            let tbody = document.getElementById("tablrRow")
+            data.forEach(item => {
+                console.log(item)
+                let tr = document.createElement("tr") // <tr></tr>
+                let td = document.createElement("td")//<td></td>
+                let td1 = document.createElement("td")
+
+                td.append(document.createTextNode(item.userId)) //<td>1</td>
+                td1.append(document.createTextNode(item.title)) //<td>1</td>
+                tr.appendChild(td)//<tr><td></td></tr>
+                tr.appendChild(td1)
+                tbody.appendChild(tr)
+            })
+        })
+
+})
